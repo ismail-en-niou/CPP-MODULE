@@ -130,7 +130,7 @@ bool	Account::makeWithdrawal( int withdrawal )
     return false;
 }
 
-int		Account::checkAmount( int &i ) const;
+int		Account::checkAmount( void ) const
 {
     return _amount;
 }

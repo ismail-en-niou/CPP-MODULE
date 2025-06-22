@@ -6,7 +6,7 @@
 /*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 22:39:30 by marvin            #+#    #+#             */
-/*   Updated: 2025/06/20 16:28:11 by ien-niou         ###   ########.fr       */
+/*   Updated: 2025/06/22 12:23:37 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main(int ac, char const *av[])
             int	j = 0;
             while (av[i][j])
             {
-                std::cout << (char)toupper(av[i][j]);
+                std::cout << (char)std::toupper(av[i][j]);
                 j++;
             }
             i++;
