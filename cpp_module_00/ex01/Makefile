@@ -1,4 +1,4 @@
-NAME = exe01
+NAME = PhoneBook
 cc = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -10,7 +10,7 @@ all: $(NAME)
 $(NAME) : $(OBJS)
 	$(cc) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
-%.o : %.cpp
+%.o : %.cpp PhoneBook.hpp Contact.hpp
 	$(cc) $(CPPFLAGS) -c $< -o $@
 
 clean:

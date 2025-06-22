@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ien-niou <ien-niou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 19:37:03 by marvin            #+#    #+#             */
-/*   Updated: 2025/06/01 19:37:03 by marvin           ###   ########.fr       */
+/*   Updated: 2025/06/22 09:44:44 by ien-niou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ class Contact {
         std::string lastName;
         std::string nickname;
         std::string phoneNumber;
-        std::string darkestSecret;
-        bool isSet;  
+        std::string darkestSecret; 
     public:
         Contact();
         ~Contact();
