@@ -12,6 +12,9 @@
 #ifndef __ACCOUNT_H__
 #define __ACCOUNT_H__
 
+#include <iostream>
+#include <iomanip>
+
 // ************************************************************************** //
 //                               Account Class                                //
 // ************************************************************************** //
@@ -34,7 +37,7 @@ public:
 
 	void	makeDeposit( int deposit );
 	bool	makeWithdrawal( int withdrawal );
-	int		checkAmount( void ) const;
+	int		checkAmount( void );
 	void	displayStatus( void ) const;
 
 
