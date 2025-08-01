@@ -1,24 +1,20 @@
 NAME = Weapon
-cc = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp  
+SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJS = $(SRCS:.cpp=.o)
 
-all: $(NAME)
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-$(NAME) : $(OBJS)
-	$(cc) $(CPPFLAGS) $(OBJS) -o $(NAME)
-
-%.o : %.cpp
-	$(cc) $(CPPFLAGS) -c $< -o $@
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-	rm -rf $(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -f $(NAME)
 
-re: fclean all
+re: fclean $(NAME)
 
-.PHONY: all clean fclean re
+.PHONY: clean fclean re
