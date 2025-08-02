@@ -1,12 +1,12 @@
-NAME = Weapon
+NAME = harl
 
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS = main.cpp Harl.cpp 
 OBJS = $(SRCS:.cpp=.o)
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-$(NAME): $(OBJS) HumanA.hpp HumanB.hpp Weapon.hpp
+$(NAME): $(OBJS) harl.hpp
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
