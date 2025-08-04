@@ -13,7 +13,6 @@ class Zombie
         std::string name;
     public:
         void announce( void );
-        Zombie* newZombie( std::string name );
         Zombie(std::string name);
         Zombie();
         ~Zombie();

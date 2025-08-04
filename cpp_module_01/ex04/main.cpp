@@ -11,6 +11,11 @@ int main(int argc, char const *argv[])
     std::string search = argv[2];
     std::string replace = argv[3];
 
+    if (search.empty())
+    {
+         std::cerr << "Cannot take a empty search please try again!" << std::endl;
+         return 1;
+    }
     std::ifstream MyReadFile(fileName);
     if (!MyReadFile)
     {
@@ -46,6 +51,5 @@ int main(int argc, char const *argv[])
     outFile.close();
 
     std::cout << "Replacement done. Output saved to " << fileName + ".replace" << std::endl;
-
     return 0;
 }

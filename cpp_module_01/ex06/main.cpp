@@ -20,22 +20,18 @@ int main(int ac, char const *av[])
         case 0:
             std::cout << "[ DEBUG ]" << std::endl;
             harl.complain("DEBUG");
-            break;
         case 1:
             std::cout << "[ INFO ]" << std::endl;
             harl.complain("INFO");
-            break;
         case 2:
             std::cout << "[ WARNING ]" << std::endl;
             harl.complain("WARNING");
-            break;
         case 3:
             std::cout << "[ ERROR ]" << std::endl;
             harl.complain("ERROR");
             break;
         default:
             std::cout << "[ Probably complaining about insignificant problems ]" <<std::endl;
-            break;
     }
     return 0;
 }
