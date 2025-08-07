@@ -1,5 +1,6 @@
 #include "Point.hpp"
 #include <iostream>
+#include <ostream>
 
 Point::Point()
 {
@@ -29,3 +30,27 @@ Point &Point::operator+(Point &p)
 }
 
 Point::~Point(){}
+
+std::ostream &operator<<(std::ostream &out , const Point &p)
+{
+    out << "( " << p.x << " , " << p.y << " )";
+    return out;
+}
+
+void Point::setX(int x)
+{
+    this->x = x;
+}
+
+void Point::setY(int y)
+{
+    this->y = y;
+}
+
+std::istream& operator>>(std::istream& in, Point& p) {
+    std::cout << "Enter x: ";
+    in >> p.x;
+    std::cout << "Enter y: ";
+    in >> p.y;
+    return in;
+}

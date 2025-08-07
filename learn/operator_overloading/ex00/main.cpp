@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-int main(int argc, char const *argv[])
+int main()
 {
     Point a(3,2);
     Point b(6,2);

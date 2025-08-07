@@ -12,6 +12,11 @@ class Point
         ~Point();
         Point(int x , int y);
         Point &operator+(Point &p);
+        Point &operator>>(Point &p);
+        friend std::ostream& operator<<(std::ostream& out, const Point& p);
+        friend std::istream& operator>>(std::istream& in, Point& p);
+        void setX(int x);
+        void setY(int y);
         int getY();
         int getX();
 };

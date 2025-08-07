@@ -16,5 +16,4 @@ class Point
         int getX();
 };
 
-
 #endif
