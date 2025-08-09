@@ -108,6 +108,11 @@ Fixed   Fixed::operator+(const Fixed &fix)
 
 Fixed   Fixed::operator/(const Fixed &fix)
 {
+    if (fix.fixe == 0)
+    {
+        std::cerr << "Devise by 0 is impossible!" << std::endl;
+        return 0;
+    }
     return Fixed(this->toFloat() / fix.toFloat());
 }
 
