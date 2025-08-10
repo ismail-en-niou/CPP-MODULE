@@ -134,6 +134,19 @@ Fixed   &Fixed::operator++(void)
     return *this;  
 }
 
+Fixed   Fixed::operator--(int)
+{
+    Fixed tmp = *this;
+    this->fixe--;
+    return tmp;
+}
+
+Fixed   &Fixed::operator--(void)
+{
+    this->fixe--;
+    return *this;
+}
+
 Fixed &Fixed::min(Fixed &a , Fixed &b)
 {
     if (a < b)

@@ -27,6 +27,8 @@ class Fixed
 
         Fixed operator++(int);
         Fixed &operator++(void);
+        Fixed operator--(int);
+        Fixed &operator--(void);
 
         bool  operator<=(const Fixed &fix);
         bool  operator>=(const Fixed &fix);
