@@ -54,6 +54,6 @@ int	main( void )
 		std::cout << "\n--- Special Ability Test ---\n";
 		st1.guardGate();
 	}
-	
+	ScavTrap sav("ismail");
 	return (0);
 }

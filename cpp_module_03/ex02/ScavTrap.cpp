@@ -1,4 +1,5 @@
 #include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
 ScavTrap::ScavTrap(void)
 {
@@ -9,7 +10,7 @@ ScavTrap::ScavTrap(void)
     std::cout << "ScavTrap " << name << " default constructor called." << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
     this->name = name;
     hit_point = 100;
@@ -18,25 +19,19 @@ ScavTrap::ScavTrap(std::string name)
     std::cout << "ScavTrap " << name << " constructor called." << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap &scav)
+ScavTrap::ScavTrap(ScavTrap &scav) : ClapTrap(scav)
 {
     name = scav.name;
     hit_point = scav.hit_point;
     eng_point = scav.eng_point;
     attack_point = scav.attack_point;
-    std::cout << "ScavTrap " << name << "Copy Constructror called" << std::endl;
+    std::cout << "ScavTrap" << name << "Copy Constructror called" << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &copy)
 {
-    if (this != &copy)
-    {
-        name = copy.name;
-        hit_point = copy.hit_point;
-        eng_point = copy.eng_point;
-        attack_point = copy.attack_point;
-        std::cout << "ScavTrap " << name << " copy assignment operator called." << std::endl;
-    }
+    ClapTrap::operator=(copy);
+    std::cout << "ScavTrap " << name << " copy assignment operator called." << std::endl;
     return *this;
 }
 

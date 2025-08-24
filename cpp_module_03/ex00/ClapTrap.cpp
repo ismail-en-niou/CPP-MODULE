@@ -16,7 +16,7 @@ ClapTrap::ClapTrap(const std::string name) :
     eng_point(10), 
     attack_point(0) 
 {
-    std::cout << "ClapTrap named constructor called"
+    std::cout << "ClapTrap "<<name << " constructor called"
               << std::endl;  
 }
 
@@ -123,9 +123,13 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &clap)
 {
-    name = clap.name;
-    hit_point = clap.hit_point;
-    attack_point = clap.attack_point;
-    eng_point = clap.eng_point;
+    if (this != &clap)
+    {
+        name = clap.name;
+        hit_point = clap.hit_point;
+        attack_point = clap.attack_point;
+        eng_point = clap.eng_point;
+    }
+    std::cout << "ClapTrap " << name << " copy assignment operator called." << std::endl;
     return *this;
 }

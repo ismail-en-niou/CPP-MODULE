@@ -1,4 +1,5 @@
 #include "FragTrap.hpp"
+#include "ClapTrap.hpp"
 
 FragTrap::FragTrap(){
     name = "NO_NAME";
@@ -8,7 +9,7 @@ FragTrap::FragTrap(){
     std::cout << "Fragtrap " << name << " default constactor called" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
     this->name = name;
     hit_point = 100;
@@ -17,12 +18,8 @@ FragTrap::FragTrap(std::string name)
     std::cout << "Fragtrap " << name << " constactor called" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &copy)
+FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
-    name = copy.name;
-    hit_point = copy.hit_point;
-    eng_point = copy.eng_point;
-    attack_point = copy.attack_point;
     std::cout << "Fragtrap " << name << "Copy Constructror called" << std::endl;
 }
 

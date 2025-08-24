@@ -16,7 +16,7 @@ ClapTrap::ClapTrap(const std::string name) :
     eng_point(10), 
     attack_point(0) 
 {
-    std::cout << "ClapTrap named constructor called"
+    std::cout << "ClapTrap "<<name << " constructor called"
               << std::endl;  
 }
 
