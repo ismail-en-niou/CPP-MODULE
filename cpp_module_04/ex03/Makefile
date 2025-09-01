@@ -1,4 +1,4 @@
-NAME = Animal
+NAME = Material
 
 SRCS = AMateria.cpp  Character.cpp  Cure.cpp  Ice.cpp  mail.cpp  MateriaSource.cpp
 
