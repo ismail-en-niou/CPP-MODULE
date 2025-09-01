@@ -6,13 +6,13 @@
 Dog::Dog()
 {
     type = "Dog";
-    brain = new Brain();
     std::cout << "Dog default constructor called " << std::endl;
+    brain = new Brain();
 }
 Dog::Dog(const Dog &copy) : Animal(copy)
 {
-    brain = new Brain(*copy.brain);
     std::cout << "Dog this copy constructor called " << std::endl;
+    brain = new Brain(*copy.brain);
 }
 
 Dog &Dog::operator=(const Dog &copy)

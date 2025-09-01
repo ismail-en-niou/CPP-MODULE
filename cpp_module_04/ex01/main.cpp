@@ -11,16 +11,19 @@ int main()
 	const Animal*	i = new Cat();
 
 	delete j;
+	std::cout << "~~~~~~~~~~~~~~~~~~~" << std::endl;
+	std::cout << i->getType() << std::endl;
+	std::cout << "~~~~~~~~~~~~~~~~~~~" << std::endl;
 	delete i;
-
+	
 	std::cout << "------------------------------------------------" << std::endl;
 	{
 		Dog	d1;
+			d1.setBrainIdea(0, "Catch the ball!");
 		Dog	d2(d1);
 
-		d1.setBrainIdea(0, "Catch the ball!");
-		d2.setBrainIdea(0, "Chase the cat!");
-
+		d1.setBrainIdea(0,"this a diff idea");
+		
 		d1.showBrainIdea(0);
 		d2.showBrainIdea(0);
 	}

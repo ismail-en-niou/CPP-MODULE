@@ -2,17 +2,17 @@
 #include "Brain.hpp"
 #include <iostream>
 
-Cat::Cat()
+Cat::Cat() : Animal()
 {
     type = "cat";
-    brain = new Brain();
     std::cout << "Cat default constructor called " << std::endl;
+    brain = new Brain();
 }
 
 Cat::Cat(const Cat &copy) : Animal(copy)
 {
-    brain = new Brain(*copy.brain);
     std::cout << "Cat this copy constructor called " << std::endl;
+    brain = new Brain(*copy.brain);
 }
 
 Cat &Cat::operator=(const Cat &copy)

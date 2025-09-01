@@ -3,7 +3,7 @@
 #include "ICharacter.hpp"
 #include <iostream>
 
-Cure::Cure()
+Cure::Cure() : AMateria()
 {
     type = "Cure";
     std::cout << "Cure default constructor called." << std::endl;
@@ -16,13 +16,17 @@ Cure::~Cure()
 
 Cure::Cure(Cure const &copy) : AMateria(copy)
 {
+    type = copy.type;
     std::cout << "Cure copy constructor called." << std::endl;
 }
 
 Cure &Cure::operator=(const Cure &copy)
 {
+    AMateria::operator=(copy);
     if (this != &copy)
+    {
 		type = copy.type;
+    }
 	std::cout << "Cure assignment operator called." << std::endl;
 	return (*this);
 }

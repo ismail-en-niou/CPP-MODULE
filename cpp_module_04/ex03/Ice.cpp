@@ -3,7 +3,7 @@
 #include "ICharacter.hpp"
 #include <iostream>
 
-Ice::Ice()
+Ice::Ice() : AMateria()
 {
     type = "ice";
     std::cout << "Ice default constructor called." << std::endl;
@@ -16,11 +16,13 @@ Ice::~Ice()
 
 Ice::Ice(Ice const &copy) : AMateria(copy)
 {
+    type = copy.type;
     std::cout << "Ice copy constructor called." << std::endl;
 }
 
 Ice &Ice::operator=(const Ice &copy)
 {
+    AMateria::operator=(copy);
     if (this != &copy)
 		type = copy.type;
 	std::cout << "Ice assignment operator called." << std::endl;
