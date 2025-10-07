@@ -23,7 +23,6 @@ Point::Point(Fixed x , Fixed y) : x(x) , y(y) {}
 
 float area(Point a, Point b, Point c)
 {
-    // | ax (by - cy) + bx (cy - ay) + cx (ay - by) | / 2
     float ar = (a.getX().toFloat() * (b.getY().toFloat() - c.getY().toFloat()) +
                 b.getX().toFloat() * (c.getY().toFloat() - a.getY().toFloat()) +
                 c.getX().toFloat() * (a.getY().toFloat() - b.getY().toFloat())) /

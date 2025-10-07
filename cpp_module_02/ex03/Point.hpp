@@ -17,4 +17,5 @@ class Point{
 
 float   area(Point a , Point b , Point c);
 bool is_inmidel(Point a , Point b , Point c , Point point);
+float ft_fabs(float a);
 #endif
